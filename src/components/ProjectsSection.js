@@ -2,10 +2,10 @@ import React from "react";
 import { Heading, SimpleGrid } from "@chakra-ui/react";
 import Card from "./Card";
 
-import photo1 from "../images/photo1.jpg";
-import photo2 from "../images/photo2.jpg";
-import photo3 from "../images/photo3.jpg";
-import photo4 from "../images/photo4.jpg";
+import photo1 from "../images/myphoto.jpg";
+import photo2 from "../images/myphoto.jpg";
+import photo3 from "../images/myphoto.jpg";
+import photo4 from "../images/myphoto.jpg";
 
 const projects = [
   {
