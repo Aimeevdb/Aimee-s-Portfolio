@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Heading, Text, Image, VStack, Center } from "@chakra-ui/react";
-import myPhoto from "../images/myphoto.jpg";  
+import { Heading, Text, Image, VStack, Center } from "@chakra-ui/react";
+import myPhoto from "../images/mewithlonghair.jpg";  
 const LandingSection = ({ greeting, bio1, bio2 }) => {
   return (
     <Center
