@@ -3,7 +3,7 @@ import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import Card from "./Card";
 
 import photo1 from "../images/myphoto.jpg";
-import photo2 from "../images/myphoto.jpg";
+import mentaMorph from "../images/MentamorphCaseStudy.png";
 import spectrumImage from "../images/spectrumcare.png";
 import familytime from "../images/familytime.png";
 
@@ -15,9 +15,10 @@ const projects = [
   },
 
   {
-    title: "React Infinite Scroll",
-    description: "An infinite scroll component for React.",
-    getImageSrc: () => photo2,
+    title: "Mentamorph",
+    description: "A UX case study focused teaching youth and their families about financial resiliency in a gamified environment.",
+    getImageSrc: () => mentaMorph,
+    link: "https://docs.google.com/presentation/d/1iJmHMGBb0r2g8qrxms0EwOvjJVEWSSiDjCJ0M13HqPc/present",
   },
 
   {
