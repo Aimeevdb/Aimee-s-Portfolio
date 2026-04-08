@@ -32,9 +32,11 @@ const Header = () => {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
+      backgroundColor="rgba(24, 24, 27, 0.7)"
+      backdropFilter="blur(10px)"
+      borderBottom="1px solid rgba(255,255,255,0.08)"
       zIndex={1000}
-      
+
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
@@ -61,7 +63,7 @@ const Header = () => {
 
           {/* Center: Portfolio name */}
           <Box fontWeight="bold" fontSize="xl">
-            Aimee's Portfolio
+            Aimee | UX Designer | Frontend Developer
           </Box>
 
           {/* Right: Section links */}
