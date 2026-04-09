@@ -2,16 +2,17 @@ import React from "react";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import Card from "./Card";
 
-import photo1 from "../images/myphoto.jpg";
+import bookingsite from "../images/booking.png";
 import mentaMorph from "../images/MentamorphCaseStudy.png";
 import spectrumImage from "../images/spectrumcare.png";
 import familytime from "../images/familytime.png";
 
 const projects = [
   {
-    title: "React Space",
-    description: "A responsive website built with React.",
-    getImageSrc: () => photo1,
+    title: "Little Lemon Booking Site",
+    description: "Designing a seamless restaurant booking experience for Little Lemon.",
+    getImageSrc: () => bookingsite,
+    link: "https://little-lemon-booking-by-aimee.netlify.app/",
   },
 
   {
