@@ -19,7 +19,7 @@ const projects = [
     title: "Mentamorph",
     description: "A UX case study focused teaching youth and their families about financial resiliency in a gamified environment.",
     getImageSrc: () => mentaMorph,
-    link: "https://docs.google.com/presentation/d/1iJmHMGBb0r2g8qrxms0EwOvjJVEWSSiDjCJ0M13HqPc/present",
+    link: "https://docs.google.com/presentation/d/1iJmHMGBb0r2g8qrxms0EwOvjJVEWSSiDjCJ0M13HqPc/preview",
   },
 
   {
@@ -27,14 +27,14 @@ const projects = [
     description:
       "A UX case study focused on designing an inclusive support experience for neurodivergent users, emphasizing accessibility, clarity, and emotional safety.",
     getImageSrc: () => spectrumImage,
-    link: "https://docs.google.com/presentation/d/1z3dJ51iwsrLsOPP2JKFR8KoIXkhMMT0hx6zoyZiT7fM/present",
+    link: "https://docs.google.com/presentation/d/1z3dJ51iwsrLsOPP2JKFR8KoIXkhMMT0hx6zoyZiT7fM/preview",
   },
 
   {
     title: "Family Time",
     description: "A UX case study exploring design decisions and research insights. My first project.",
     getImageSrc: () => familytime,
-    link: "https://docs.google.com/presentation/d/1rczfd_3AwJShuy16aaw72CQ-mfazugM1oy59Lddg6eI/present",
+    link: "https://docs.google.com/presentation/d/1rczfd_3AwJShuy16aaw72CQ-mfazugM1oy59Lddg6eI/preview",
   },
 ];
 
