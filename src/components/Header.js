@@ -2,7 +2,14 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  VStack,
+  IconButton,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const socials = [
   { icon: faEnvelope, url: "mailto:aimeevdb@gmail.com" },
@@ -11,6 +18,8 @@ const socials = [
 ];
 
 const Header = () => {
+  const { isOpen, onToggle } = useDisclosure();
+
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
@@ -61,23 +70,65 @@ const Header = () => {
             </HStack>
           </nav>
 
+{/* Mobile Dropdown Menu */}
+{isOpen && (
+  <VStack
+    display={{ md: "none" }}
+    spacing={4}
+    pb={4}
+    bg="rgba(24, 24, 27, 0.95)"
+  >
+    <a
+      href="#projects-section"
+      onClick={() => {
+        handleClick("projects")();
+        onToggle();
+      }}
+    >
+      Projects
+    </a>
+
+    <a
+      href="#contactme-section"
+      onClick={() => {
+        handleClick("contactme")();
+        onToggle();
+      }}
+    >
+      Contact Me
+    </a>
+  </VStack>
+)}
           {/* Center: Portfolio name */}
           <Box fontWeight="bold" fontSize="xl">
             Aimee | UX Designer | Frontend Developer
           </Box>
 
-          {/* Right: Section links */}
-          <nav>
-            <HStack spacing={8}>
-              <a href="#projects-section" onClick={handleClick("projects")}>
-                Projects
-              </a>
-              <a href="#contactme-section" onClick={handleClick("contactme")}>
-                Contact Me
-              </a>
-            </HStack>
-          </nav>
-        </HStack>
+{/* Desktop Navigation */}
+<nav>
+  <HStack
+    spacing={8}
+    display={{ base: "none", md: "flex" }}
+  >
+    <a href="#projects-section" onClick={handleClick("projects")}>
+      Projects
+    </a>
+
+    <a href="#contactme-section" onClick={handleClick("contactme")}>
+      Contact Me
+    </a>
+  </HStack>
+</nav>
+
+{/* Mobile Hamburger Button */}
+<IconButton
+  display={{ base: "flex", md: "none" }}
+  icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+  onClick={onToggle}
+  aria-label="Toggle Navigation"
+  variant="ghost"
+  color="white"
+/>        </HStack>
       </Box>
     </Box>
   );
