@@ -1,52 +1,49 @@
 import React from "react";
-import { Box, VStack, HStack, Image, Heading, Text } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Box, VStack, Image, Heading, Text, Button } from "@chakra-ui/react";
 
 const Card = ({ title, description, image, link }) => {
   return (
     <Box
       borderWidth="1px"
-      borderRadius="md"
+      borderRadius="lg"
       overflow="hidden"
       padding={4}
-      maxW="300px"
+      w="100%"
       boxShadow="md"
-      _hover={{ boxShadow: "lg" }}
+      _hover={{ boxShadow: "xl", transform: "translateY(-2px)", transition: "all 0.2s" }}
+      display="flex"
+      flexDirection="column"
     >
-      <VStack spacing={4} align="start">
-        {link ? (
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <Image
-              src={image}
-              alt={title}
-              borderRadius="md"
-              width="100%"
-              height="180px"
-              objectFit="contain"
-              bg="gray.100"
-            />
-          </a>
-        ) : (
-          <Image
-            src={image}
-            alt={title}
-            borderRadius="md"
-            width="100%"
-            height="180px"
-            objectFit="contain"
-            bg="gray.100"
-          />
-        )}
+      <VStack spacing={4} align="start" flex="1">
+        <Image
+          src={image}
+          alt={title}
+          borderRadius="md"
+          width="100%"
+          height="180px"
+          objectFit="cover"
+          bg="gray.100"
+        />
 
-        <VStack spacing={2} align="start">
+        <VStack spacing={2} align="start" flex="1">
           <Heading size="md">{title}</Heading>
-          <Text fontSize="sm">{description}</Text>
+          <Text fontSize="sm" color="gray.600">{description}</Text>
         </VStack>
 
-        <HStack justify="flex-end" w="100%">
-          <FontAwesomeIcon icon={faArrowRight} size="1x" />
-        </HStack>
+        {link && (
+          <Button
+            as="a"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            colorScheme="purple"
+            size="sm"
+            w="100%"
+            mt="auto"
+          >
+            View Project
+          </Button>
+        )}
       </VStack>
     </Box>
   );

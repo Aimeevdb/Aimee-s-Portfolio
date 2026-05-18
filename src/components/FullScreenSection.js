@@ -7,12 +7,18 @@ const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
       width="100%"
       backgroundColor={boxProps.backgroundColor}
       color={isDarkBackground ? "white" : "black"}
-      p={boxProps.p}          // ⭐ padding belongs OUTSIDE
+      p={boxProps.p}
+      py={boxProps.py}
       spacing={boxProps.spacing}
-      alignItems={boxProps.alignItems}
+      alignItems={boxProps.alignItems ?? "center"}
       bgGradient={boxProps.bgGradient}
     >
-      <VStack maxWidth="1280px" minHeight="100vh">
+      <VStack
+        width="100%"
+        maxWidth="1280px"
+        px={[4, 8, 16]}
+        alignItems="flex-start"
+      >
         {children}
       </VStack>
     </VStack>

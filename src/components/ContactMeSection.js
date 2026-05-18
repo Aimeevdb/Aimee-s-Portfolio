@@ -55,69 +55,80 @@ const ContactMeSection = () => {
       backgroundColor="#512DA8"
       py={16}
       spacing={8}
-      scrollMarginTop="-100px"
     >
-      <VStack w="1080px" p={32} alignItems="flex-start">
-        <Heading as="h1" id="contactme-section">
+      {/* Fixed: was w="1080px" which caused overflow on small screens */}
+      <VStack w="100%" maxW="680px" px={[6, 10, 16]} alignItems="flex-start">
+        <Heading as="h1" id="contactme-section" color="white">
           Contact me
         </Heading>
 
-        <Box p={6} rounded="md" w="100%">
+        <Box p={[4, 6]} rounded="md" w="100%">
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl
                 isInvalid={formik.touched.firstName && formik.errors.firstName}
               >
-                <FormLabel htmlFor="firstName">Name</FormLabel>
+                <FormLabel htmlFor="firstName" color="whiteAlpha.900">Name</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
+                  bg="whiteAlpha.100"
+                  color="white"
+                  borderColor="whiteAlpha.300"
+                  _hover={{ borderColor: "whiteAlpha.500" }}
                   {...formik.getFieldProps("firstName")}
                 />
-                <FormErrorMessage>
-                  {formik.errors.firstName}
-                </FormErrorMessage>
+                <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
               </FormControl>
 
               <FormControl
                 isInvalid={formik.touched.email && formik.errors.email}
               >
-                <FormLabel htmlFor="email">Email Address</FormLabel>
+                <FormLabel htmlFor="email" color="whiteAlpha.900">Email Address</FormLabel>
                 <Input
                   id="email"
                   name="email"
                   type="email"
+                  bg="whiteAlpha.100"
+                  color="white"
+                  borderColor="whiteAlpha.300"
+                  _hover={{ borderColor: "whiteAlpha.500" }}
                   {...formik.getFieldProps("email")}
                 />
-                <FormErrorMessage>
-                  {formik.errors.email}
-                </FormErrorMessage>
+                <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
 
               <FormControl>
-                <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type" {...formik.getFieldProps("type")}>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
-                  </option>
-                  <option value="other">Other</option>
+                <FormLabel htmlFor="type" color="whiteAlpha.900">Type of enquiry</FormLabel>
+                <Select
+                  id="type"
+                  name="type"
+                  bg="whiteAlpha.100"
+                  color="white"
+                  borderColor="whiteAlpha.300"
+                  {...formik.getFieldProps("type")}
+                >
+                  <option value="hireMe" style={{ color: "black" }}>Freelance project proposal</option>
+                  <option value="openSource" style={{ color: "black" }}>Open source consultancy session</option>
+                  <option value="other" style={{ color: "black" }}>Other</option>
                 </Select>
               </FormControl>
 
               <FormControl
                 isInvalid={formik.touched.comment && formik.errors.comment}
               >
-                <FormLabel htmlFor="comment">Your message</FormLabel>
+                <FormLabel htmlFor="comment" color="whiteAlpha.900">Your message</FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
                   height={250}
+                  bg="whiteAlpha.100"
+                  color="white"
+                  borderColor="whiteAlpha.300"
+                  _hover={{ borderColor: "whiteAlpha.500" }}
                   {...formik.getFieldProps("comment")}
                 />
-                <FormErrorMessage>
-                  {formik.errors.comment}
-                </FormErrorMessage>
+                <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
 
               <Button
