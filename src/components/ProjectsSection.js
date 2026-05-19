@@ -25,11 +25,12 @@ const projects = [
 {
   title: "Spectrum Care",
   description:
-    "A UX case study focused on designing an inclusive support experience for neurodivergent users, emphasizing accessibility, clarity, and emotional safety.",
+    "A UX case study tackling the frustrating process of finding a therapist — designing a clean, accessible provider search and booking experience that puts the right information upfront.",
   getImageSrc: () => spectrumImage,
   link: "https://docs.google.com/presentation/d/1gQsHermPVW7f9MQ1s7ubjOqDPwq3IvTLxuETsbAbuQg/preview",
 },
-  {
+
+{
     title: "Family Time",
     description: "A UX case study exploring design decisions and research insights. My first project.",
     getImageSrc: () => familytime,
