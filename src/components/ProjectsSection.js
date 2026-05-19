@@ -22,14 +22,13 @@ const projects = [
     link: "https://docs.google.com/presentation/d/1iJmHMGBb0r2g8qrxms0EwOvjJVEWSSiDjCJ0M13HqPc/preview",
   },
 
-  {
-    title: "Spectrum Care",
-    description:
-      "A UX case study focused on designing an inclusive support experience for neurodivergent users, emphasizing accessibility, clarity, and emotional safety.",
-    getImageSrc: () => spectrumImage,
-    link: "https://docs.google.com/presentation/d/1z3dJ51iwsrLsOPP2JKFR8KoIXkhMMT0hx6zoyZiT7fM/preview",
-  },
-
+{
+  title: "Spectrum Care",
+  description:
+    "A UX case study focused on designing an inclusive support experience for neurodivergent users, emphasizing accessibility, clarity, and emotional safety.",
+  getImageSrc: () => spectrumImage,
+  link: "https://docs.google.com/presentation/d/1gQsHermPVW7f9MQ1s7ubjOqDPwq3IvTLxuETsbAbuQg/preview",
+},
   {
     title: "Family Time",
     description: "A UX case study exploring design decisions and research insights. My first project.",

@@ -7,6 +7,7 @@ import {
   HStack,
   VStack,
   IconButton,
+  Text,
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
@@ -24,10 +25,8 @@ const Header = () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (isOpen) onToggle();
     }
   };
 
@@ -37,7 +36,6 @@ const Header = () => {
       top={0}
       left={0}
       right={0}
-      translateY={0}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
@@ -45,90 +43,62 @@ const Header = () => {
       backdropFilter="blur(10px)"
       borderBottom="1px solid rgba(255,255,255,0.08)"
       zIndex={1000}
-
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
-          px={16}
-          py={4}
+          px={{ base: 4, md: 16 }}
+          py={3}
           justifyContent="space-between"
           alignItems="center"
         >
-          {/* Left: social links */}
           <nav>
             <HStack spacing={4}>
               {socials.map((social) => (
-                <a
-                  key={social.url}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a key={social.url} href={social.url} target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={social.icon} size="lg" />
                 </a>
               ))}
             </HStack>
           </nav>
 
-{/* Mobile Dropdown Menu */}
-{isOpen && (
-  <VStack
-    display={{ md: "none" }}
-    spacing={4}
-    pb={4}
-    bg="rgba(24, 24, 27, 0.95)"
-  >
-    <a
-      href="#projects-section"
-      onClick={() => {
-        handleClick("projects")();
-        onToggle();
-      }}
-    >
-      Projects
-    </a>
-
-    <a
-      href="#contactme-section"
-      onClick={() => {
-        handleClick("contactme")();
-        onToggle();
-      }}
-    >
-      Contact Me
-    </a>
-  </VStack>
-)}
-          {/* Center: Portfolio name */}
-          <Box fontWeight="bold" fontSize="xl">
-            Aimee | UX Designer | Frontend Developer
+          <Box fontWeight="bold" textAlign="center">
+            <Text fontSize="sm" display={{ base: "block", md: "none" }}>
+              Aimee
+            </Text>
+            <Text fontSize="xl" display={{ base: "none", md: "block" }}>
+              Aimee | UX Designer | Frontend Developer
+            </Text>
           </Box>
 
-{/* Desktop Navigation */}
-<nav>
-  <HStack
-    spacing={8}
-    display={{ base: "none", md: "flex" }}
-  >
-    <a href="#projects-section" onClick={handleClick("projects")}>
-      Projects
-    </a>
+          <nav>
+            <HStack spacing={8} display={{ base: "none", md: "flex" }}>
+              <a href="#projects-section" onClick={handleClick("projects")}>Projects</a>
+              <a href="#contactme-section" onClick={handleClick("contactme")}>Contact Me</a>
+            </HStack>
+          </nav>
 
-    <a href="#contactme-section" onClick={handleClick("contactme")}>
-      Contact Me
-    </a>
-  </HStack>
-</nav>
+          <IconButton
+            display={{ base: "flex", md: "none" }}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            onClick={onToggle}
+            aria-label="Toggle Navigation"
+            variant="ghost"
+            color="white"
+          />
+        </HStack>
 
-{/* Mobile Hamburger Button */}
-<IconButton
-  display={{ base: "flex", md: "none" }}
-  icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-  onClick={onToggle}
-  aria-label="Toggle Navigation"
-  variant="ghost"
-  color="white"
-/>        </HStack>
+        {isOpen && (
+          <VStack
+            display={{ md: "none" }}
+            spacing={4}
+            py={4}
+            bg="rgba(24, 24, 27, 0.95)"
+            borderTop="1px solid rgba(255,255,255,0.08)"
+          >
+            <a href="#projects-section" onClick={handleClick("projects")}>Projects</a>
+            <a href="#contactme-section" onClick={handleClick("contactme")}>Contact Me</a>
+          </VStack>
+        )}
       </Box>
     </Box>
   );
