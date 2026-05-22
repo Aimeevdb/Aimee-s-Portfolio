@@ -2,39 +2,30 @@ import React from "react";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import Card from "./Card";
 
-import bookingsite from "../images/booking.png";
-import mentaMorph from "../images/MentamorphCaseStudy.png";
-import spectrumImage from "../images/spectrumcare.png";
-import familytime from "../images/familytime.png";
-
 const projects = [
   {
     title: "Little Lemon Booking Site",
     description: "Designing a seamless restaurant booking experience for Little Lemon.",
-    getImageSrc: () => bookingsite,
     link: "https://little-lemon-booking-by-aimee.netlify.app/",
+    tags: ["Frontend", "React", "UX Design"],
   },
-
   {
     title: "Mentamorph",
     description: "A UX case study focused teaching youth and their families about financial resiliency in a gamified environment.",
-    getImageSrc: () => mentaMorph,
     link: "https://docs.google.com/presentation/d/1iJmHMGBb0r2g8qrxms0EwOvjJVEWSSiDjCJ0M13HqPc/preview",
+    tags: ["UX Case Study", "Figma", "User Research"],
   },
-
-{
-  title: "Spectrum Care",
-  description:
-    "A UX case study tackling the frustrating process of finding a therapist — designing a clean, accessible provider search and booking experience that puts the right information upfront.",
-  getImageSrc: () => spectrumImage,
-  link: "https://docs.google.com/presentation/d/1gQsHermPVW7f9MQ1s7ubjOqDPwq3IvTLxuETsbAbuQg/preview",
-},
-
-{
+  {
+    title: "Spectrum Care",
+    description: "A UX case study tackling the frustrating process of finding a therapist — designing a clean, accessible provider search and booking experience that puts the right information upfront.",
+    link: "https://docs.google.com/presentation/d/1gQsHermPVW7f9MQ1s7ubjOqDPwq3IvTLxuETsbAbuQg/preview",
+    tags: ["UX Case Study", "Figma", "Wireframing", "Prototyping"],
+  },
+  {
     title: "Family Time",
     description: "A UX case study exploring design decisions and research insights. My first project.",
-    getImageSrc: () => familytime,
     link: "https://docs.google.com/presentation/d/1rczfd_3AwJShuy16aaw72CQ-mfazugM1oy59Lddg6eI/preview",
+    tags: ["UX Case Study", "Figma", "Wireframing"],
   },
 ];
 
@@ -51,13 +42,14 @@ const ProjectsSection = () => {
         Featured Projects
       </Heading>
 
-<SimpleGrid columns={[1, 2, 2]} spacing={10} px={4} justifyItems="center">        {projects.map((project) => (
+      <SimpleGrid columns={[1, 2, 2]} spacing={10} px={4} justifyItems="center">
+        {projects.map((project) => (
           <Card
             key={project.title}
             title={project.title}
             description={project.description}
-            image={project.getImageSrc()}
             link={project.link}
+            tags={project.tags}
           />
         ))}
       </SimpleGrid>
