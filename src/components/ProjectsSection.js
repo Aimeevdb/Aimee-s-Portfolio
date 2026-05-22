@@ -29,20 +29,29 @@ const projects = [
   },
 ];
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ embedded = false }) => {
   return (
-    <Box bg="#fff7fb" py={20}>
-      <Heading
-        as="h1"
-        id="projects-section"
-        scrollMarginTop="100px"
-        textAlign="center"
-        mb={8}
+    <Box
+      bg={embedded ? "transparent" : "#fff7fb"}
+      py={embedded ? 0 : 20}
+      id={!embedded ? "projects-section" : undefined}
+    >
+      {!embedded && (
+        <Heading
+          as="h1"
+          scrollMarginTop="100px"
+          textAlign="center"
+          mb={8}
+        >
+          Featured Projects
+        </Heading>
+      )}
+      <SimpleGrid
+        columns={[1, 2, 2]}
+        spacing={6}
+        px={embedded ? 0 : 4}
+        justifyItems="center"
       >
-        Featured Projects
-      </Heading>
-
-      <SimpleGrid columns={[1, 2, 2]} spacing={10} px={4} justifyItems="center">
         {projects.map((project) => (
           <Card
             key={project.title}
