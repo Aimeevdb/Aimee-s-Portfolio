@@ -2,14 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-  Box,
-  HStack,
-  VStack,
-  IconButton,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Box, HStack, IconButton, Text, useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 const socials = [
@@ -45,12 +38,7 @@ const Header = () => {
       zIndex={1000}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
-        <HStack
-          px={{ base: 4, md: 16 }}
-          py={3}
-          justifyContent="space-between"
-          alignItems="center"
-        >
+        <HStack px={{ base: 4, md: 16 }} py={3} justifyContent="space-between" alignItems="center">
           <nav>
             <HStack spacing={4}>
               {socials.map((social) => (
@@ -60,23 +48,16 @@ const Header = () => {
               ))}
             </HStack>
           </nav>
-
           <Box fontWeight="bold" textAlign="center">
-            <Text fontSize="sm" display={{ base: "block", md: "none" }}>
-              Aimee
-            </Text>
-            <Text fontSize="xl" display={{ base: "none", md: "block" }}>
-              Aimee | UX Designer | Frontend Developer
-            </Text>
+            <Text fontSize="sm" display={{ base: "block", md: "none" }}>Aimee</Text>
+            <Text fontSize="xl" display={{ base: "none", md: "block" }}>Aimee | UX Designer | Frontend Developer</Text>
           </Box>
-
           <nav>
             <HStack spacing={8} display={{ base: "none", md: "flex" }}>
               <a href="#projects-section" onClick={handleClick("projects")}>Projects</a>
               <a href="#contactme-section" onClick={handleClick("contactme")}>Contact Me</a>
             </HStack>
           </nav>
-
           <IconButton
             display={{ base: "flex", md: "none" }}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -86,18 +67,11 @@ const Header = () => {
             color="white"
           />
         </HStack>
-
         {isOpen && (
-          <VStack
-            display={{ md: "none" }}
-            spacing={4}
-            py={4}
-            bg="rgba(24, 24, 27, 0.95)"
-            borderTop="1px solid rgba(255,255,255,0.08)"
-          >
-            <a href="#projects-section" onClick={handleClick("projects")}>Projects</a>
-            <a href="#contactme-section" onClick={handleClick("contactme")}>Contact Me</a>
-          </VStack>
+          <div style={{ display: "flex", flexDirection: "column", width: "100%", background: "rgba(24, 24, 27, 0.95)", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+            <a href="#projects-section" onClick={handleClick("projects")} style={{ color: "white", textAlign: "center", padding: "12px 0", textDecoration: "none" }}>Projects</a>
+            <a href="#contactme-section" onClick={handleClick("contactme")} style={{ color: "white", textAlign: "center", padding: "12px 0", textDecoration: "none" }}>Contact Me</a>
+          </div>
         )}
       </Box>
     </Box>
