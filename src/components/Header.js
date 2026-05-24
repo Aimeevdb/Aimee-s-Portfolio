@@ -4,6 +4,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, IconButton, Text, useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const socials = [
   { icon: faEnvelope, url: "mailto:aimeevdb@gmail.com" },
@@ -13,14 +14,31 @@ const socials = [
 
 const Header = () => {
   const { isOpen, onToggle } = useDisclosure();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleClick = (anchor) => () => {
+  const handleClick = (anchor) => (e) => {
+    e.preventDefault();
     const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      if (isOpen) onToggle();
+
+    if (location.pathname === "/") {
+      // Already on home — just scroll
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // On a project page — go home first, then scroll after navigation
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
     }
+
+    if (isOpen) onToggle();
   };
 
   return (

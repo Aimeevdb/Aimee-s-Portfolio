@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Mentamorph",
     description: "A UX case study focused teaching youth and their families about financial resiliency in a gamified environment.",
-    link: "https://docs.google.com/presentation/d/1iJmHMGBb0r2g8qrxms0EwOvjJVEWSSiDjCJ0M13HqPc/preview",
+    link: "/mentamorph",
     tags: ["UX Case Study", "Figma", "User Research"],
   },
   {
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Family Time",
     description: "A UX case study exploring design decisions and research insights. My first project.",
-    link: "https://docs.google.com/presentation/d/1rczfd_3AwJShuy16aaw72CQ-mfazugM1oy59Lddg6eI/preview",
+    link: "/family-time",
     tags: ["UX Case Study", "Figma", "Wireframing"],
   },
 ];

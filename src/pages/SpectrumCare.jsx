@@ -31,6 +31,7 @@ const styles = `
   }
   .sc-nav-link:hover { color: #6B9E8F; }
 
+  .sc-hero-spacer { height: 60px; }
   .sc-hero-banner {
     position: relative; overflow: hidden;
     padding: 8rem 3rem 4rem;
@@ -257,7 +258,8 @@ const styles = `
 
   @media (max-width: 800px) {
     .sc-nav { padding: 1rem 1.5rem; }
-    .sc-hero-banner { padding: 6rem 1.5rem 3rem; }
+    .sc-hero-spacer { height: 60px; }
+  .sc-hero-banner { padding: 6rem 1.5rem 3rem; }
     .sc-hero-content { grid-template-columns: 1fr; gap: 2.5rem; }
     .sc-section { padding: 3rem 1.5rem; }
     .sc-two-col { grid-template-columns: 1fr; }
@@ -315,11 +317,7 @@ export default function SpectrumCare() {
 
   return (
     <div className="sc-root">
-      <nav className="sc-nav">
-        <a href="/" className="sc-nav-name">Aimee Van den Broeke</a>
-        <a href="#contact" className="sc-nav-link">Contact</a>
-      </nav>
-
+<div className="sc-hero-spacer" />
       <div className="sc-hero-banner">
         <div className="sc-rainbow-arc" aria-hidden="true" />
         <div className="sc-hero-content">
