@@ -1,5 +1,8 @@
 import React from "react";
 import { Box, VStack, HStack, Heading, Text, Button, Badge } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
+
+const isInternal = (link) => link && link.startsWith("/");
 
 const Card = ({ title, description, link, tags = [] }) => {
   return (
@@ -46,20 +49,33 @@ const Card = ({ title, description, link, tags = [] }) => {
           </Text>
         </VStack>
 
-        {/* CTA */}
+        {/* CTA — internal links use React Router, external open in new tab */}
         {link && (
-          <Button
-            as="a"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            colorScheme="purple"
-            size="sm"
-            w="100%"
-            mt="auto"
-          >
-            View Project
-          </Button>
+          isInternal(link) ? (
+            <Button
+              as={RouterLink}
+              to={link}
+              colorScheme="purple"
+              size="sm"
+              w="100%"
+              mt="auto"
+            >
+              View Project
+            </Button>
+          ) : (
+            <Button
+              as="a"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              colorScheme="purple"
+              size="sm"
+              w="100%"
+              mt="auto"
+            >
+              View Project
+            </Button>
+          )
         )}
       </VStack>
     </Box>

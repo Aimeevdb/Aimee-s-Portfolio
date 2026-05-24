@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Spectrum Care",
     description: "A UX case study tackling the frustrating process of finding a therapist — designing a clean, accessible provider search and booking experience that puts the right information upfront.",
-    link: "https://docs.google.com/presentation/d/1gQsHermPVW7f9MQ1s7ubjOqDPwq3IvTLxuETsbAbuQg/preview",
+    link: "/spectrum-care",
     tags: ["UX Case Study", "Figma", "Wireframing", "Prototyping"],
   },
   {
