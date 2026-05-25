@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap');
+
+
 
   .mm-root {
     font-family: 'Space Grotesk', sans-serif;
@@ -52,14 +54,13 @@ const styles = `
     padding: 0.35rem 0.85rem; border-radius: 100px; margin-bottom: 1.25rem;
   }
   .mm-h1 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: clamp(2.8rem, 5vw, 4rem);
-    line-height: 1.05; color: #f0eeff; margin-bottom: 1.25rem;
+    line-height: 1.2; padding-bottom: 0.1em; color: #f0eeff; margin-bottom: 1.25rem;
   }
   .mm-h1 em {
     font-style: normal;
-    background: linear-gradient(90deg, #a78bfa, #34d399);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    color: #a78bfa;
   }
   .mm-hero-sub { font-size: 1.05rem; color: rgba(240,238,255,0.7); max-width: 40ch; margin-bottom: 2rem; }
   .mm-pills { display: flex; gap: 0.75rem; flex-wrap: wrap; }
@@ -82,7 +83,7 @@ const styles = `
     text-transform: uppercase; color: #a78bfa; margin-bottom: 0.75rem;
   }
   .mm-aside-duration {
-    font-family: 'Syne', sans-serif; font-size: 1.1rem;
+    font-family: 'Outfit', sans-serif; font-size: 1.1rem;
     color: #f0eeff; margin-bottom: 1.5rem;
   }
   .mm-team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 1.5rem; }
@@ -103,15 +104,16 @@ const styles = `
   .mm-slide-link:hover { background: rgba(52,211,153,0.18); }
 
   /* SECTIONS */
-  .mm-section { max-width: 1100px; margin: 0 auto; padding: 5rem 3rem; }
+  .mm-section { max-width: 1100px; margin: 0 auto; padding: 5rem 3rem; overflow: visible; }
   .mm-section-label {
     font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
     text-transform: uppercase; color: #a78bfa; margin-bottom: 0.6rem;
   }
   .mm-h2 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: clamp(1.8rem, 3vw, 2.4rem);
-    line-height: 1.15; margin-bottom: 1.25rem; color: #f0eeff;
+    line-height: 1.4; padding-bottom: 0.3em; margin-bottom: 1rem; color: #f0eeff;
+    overflow: visible; display: block;
   }
   .mm-p { color: rgba(240,238,255,0.65); max-width: 60ch; }
   .mm-hr { border: none; border-top: 1px solid rgba(139,92,246,0.15); max-width: 1100px; margin: 0 auto; }
@@ -137,7 +139,7 @@ const styles = `
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, #34d399, #a78bfa);
   }
-  .mm-card-h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; color: #f0eeff; margin-bottom: 0.75rem; }
+  .mm-card-h3 { font-family: 'Outfit', sans-serif; font-size: 1.2rem; color: #f0eeff; margin-bottom: 0.75rem; }
 
   /* PERSONAS */
   .mm-persona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
@@ -149,12 +151,12 @@ const styles = `
   .mm-persona-avatar {
     width: 56px; height: 56px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Syne', sans-serif; font-size: 1.3rem;
+    font-family: 'Outfit', sans-serif; font-size: 1.3rem;
     color: #fff; margin-bottom: 1rem; flex-shrink: 0;
   }
   .mm-persona-avatar-student { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
   .mm-persona-avatar-parent { background: linear-gradient(135deg, #059669, #34d399); }
-  .mm-persona-name { font-family: 'Syne', sans-serif; font-size: 1.15rem; color: #f0eeff; margin-bottom: 0.2rem; }
+  .mm-persona-name { font-family: 'Outfit', sans-serif; font-size: 1.15rem; color: #f0eeff; margin-bottom: 0.2rem; }
   .mm-persona-role { font-size: 0.8rem; color: #a78bfa; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; }
   .mm-persona-quote {
     font-style: italic; font-size: 0.9rem;
@@ -180,10 +182,10 @@ const styles = `
     width: 40px; height: 40px; border-radius: 50%;
     background: linear-gradient(135deg, #7c3aed, #34d399);
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Syne', sans-serif; font-size: 1.1rem;
+    font-family: 'Outfit', sans-serif; font-size: 1.1rem;
     color: #fff; margin: 0 auto 1rem;
   }
-  .mm-pain-title { font-family: 'Syne', sans-serif; font-size: 1rem; color: #f0eeff; margin-bottom: 0.5rem; }
+  .mm-pain-title { font-family: 'Outfit', sans-serif; font-size: 1rem; color: #f0eeff; margin-bottom: 0.5rem; }
 
   /* USABILITY */
   .mm-usability-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
@@ -197,7 +199,7 @@ const styles = `
     background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.2);
   }
   .mm-usability-label {
-    font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif; font-size: 1rem; margin-bottom: 1rem;
   }
   .mm-usability-before .mm-usability-label { color: #f87171; }
   .mm-usability-after .mm-usability-label { color: #34d399; }
@@ -223,7 +225,7 @@ const styles = `
   }
   .mm-contrib-item:hover { border-color: rgba(139,92,246,0.5); }
   .mm-contrib-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
-  .mm-contrib-h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; color: #f0eeff; }
+  .mm-contrib-h4 { font-family: 'Outfit', sans-serif; font-size: 0.95rem; color: #f0eeff; }
 
   /* CONTACT */
   .mm-contact-wrap {
