@@ -19,6 +19,14 @@ const Header = () => {
 
   const handleClick = (anchor) => (e) => {
     e.preventDefault();
+
+    if (anchor === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (location.pathname !== "/") navigate("/");
+      if (isOpen) onToggle();
+      return;
+    }
+
     const id = `${anchor}-section`;
 
     if (location.pathname === "/") {
@@ -72,7 +80,8 @@ const Header = () => {
           </Box>
           <nav>
             <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-              <a href="#projects-section" onClick={handleClick("projects")}>Projects</a>
+              <a href="#home" onClick={handleClick("home")}>Home</a>
+              <a href="#about-section" onClick={handleClick("about")}>About</a>
               <a href="#contactme-section" onClick={handleClick("contactme")}>Contact Me</a>
             </HStack>
           </nav>
@@ -87,7 +96,8 @@ const Header = () => {
         </HStack>
         {isOpen && (
           <div style={{ display: "flex", flexDirection: "column", width: "100%", background: "rgba(24, 24, 27, 0.95)", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-            <a href="#projects-section" onClick={handleClick("projects")} style={{ color: "white", textAlign: "center", padding: "12px 0", textDecoration: "none" }}>Projects</a>
+            <a href="#home" onClick={handleClick("home")} style={{ color: "white", textAlign: "center", padding: "12px 0", textDecoration: "none" }}>Home</a>
+            <a href="#about-section" onClick={handleClick("about")} style={{ color: "white", textAlign: "center", padding: "12px 0", textDecoration: "none" }}>About</a>
             <a href="#contactme-section" onClick={handleClick("contactme")} style={{ color: "white", textAlign: "center", padding: "12px 0", textDecoration: "none" }}>Contact Me</a>
           </div>
         )}

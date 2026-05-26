@@ -260,7 +260,14 @@ export default function AboutSection() {
             <p>
               If that sounds like someone you want on your team, let's talk.
             </p>
-            <a className="about-cta" href="mailto:aimeevdb@gmail.com">
+            <a
+              className="about-cta"
+              href="#contactme-section"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contactme-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
               Get in touch &#8594;
             </a>
           </div>

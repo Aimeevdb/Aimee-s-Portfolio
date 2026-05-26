@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Little Lemon Booking Site",
     description: "Designing a seamless restaurant booking experience for Little Lemon.",
-    link: "https://little-lemon-booking-by-aimee.netlify.app/",
+    link: "/little-lemon",
     tags: ["Frontend", "React", "UX Design"],
   },
   {
