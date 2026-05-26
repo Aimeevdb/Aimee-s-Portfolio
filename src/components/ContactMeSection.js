@@ -37,16 +37,19 @@ const ContactMeSection = () => {
         .min(25, "Must be at least 25 characters")
         .required("Required"),
     }),
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: (values) => {
       submit(values);
-      resetForm();
     },
   });
 
   useEffect(() => {
     if (response) {
       onOpen(response.type, response.message);
+      if (response.type === "success") {
+        formik.resetForm();
+      }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [response, onOpen]);
 
   return (
