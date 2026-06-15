@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <LandingSection
         greeting="Hi, I'm Aimee"
-        bio1="I enjoy turning ideas into clean, user-friendly digital experiences."
-        bio2="Blending design and front-end development, I'm continuously learning and currently exploring Python and intelligent systems."
+        bio1="Rideshare driver turned UX Designer & Frontend Developer. Seven years reading people, solving problems on the fly, and earning 5-star ratings."
+        bio2="Now I design and build digital products that feel effortless to use — and handle the whole thing myself, from research to a live React app."
       />
       <AboutSection />
       <ContactMeSection />

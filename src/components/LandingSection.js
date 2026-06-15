@@ -8,39 +8,40 @@ const LandingSection = ({ greeting, bio1, bio2 }) => {
     <Flex
       minHeight="100vh"
       id="home"
-      bgGradient="linear(to-b, purple.600, purple.200)"
+      bgGradient="linear(to-b, purple.200, purple.600)"
       pt="80px"
+      pb={[10, 12, 16]}
       px={[6, 10, 20]}
       direction={["column", "column", "row"]}
       align="center"
       justify="center"
-      gap={10}
+      gap={8}
     >
       {/* Left — Hero */}
       <VStack
-        spacing={6}
+        spacing={4}
         textAlign="center"
-        maxW={["100%", "100%", "380px"]}
-        flex="1"
+        maxW={["100%", "100%", "440px"]}
+        flex="1.3"
       >
         <Image
           src={myPhoto}
           alt="Aimee's profile photo"
           borderRadius="full"
-          boxSize="150px"
+          boxSize="120px"
           objectFit="cover"
           boxShadow="lg"
         />
-        <Heading color="white" size={["xl", "2xl"]}>{greeting}</Heading>
-        <Text fontSize={["md", "lg"]} color="whiteAlpha.900">{bio1}</Text>
-        <Text fontSize={["md", "lg"]} color="whiteAlpha.900">{bio2}</Text>
+        <Heading color="white" size={["lg", "xl"]}>{greeting}</Heading>
+        <Text fontSize={["sm", "md"]} color="whiteAlpha.900">{bio1}</Text>
+        <Text fontSize={["sm", "md"]} color="whiteAlpha.900">{bio2}</Text>
       </VStack>
 
       {/* Right — Projects */}
       <Box
-        flex="1.5"
+        flex="1"
         w="100%"
-        maxW={["100%", "100%", "680px"]}
+        maxW={["100%", "100%", "560px"]}
         overflowY="auto"
         maxH={["none", "none", "80vh"]}
       >
