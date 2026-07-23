@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Text, Image, VStack, Box, Flex } from "@chakra-ui/react";
+import { Heading, Text, Image, VStack, Box, Flex, Button } from "@chakra-ui/react";
 import myPhoto from "../images/Profile1.png";
 import ProjectsSection from "./ProjectsSection";
 
@@ -35,6 +35,22 @@ const LandingSection = ({ greeting, bio1, bio2 }) => {
         <Heading color="white" size={["lg", "xl"]}>{greeting}</Heading>
         <Text fontSize={["sm", "md"]} color="whiteAlpha.900">{bio1}</Text>
         <Text fontSize={["sm", "md"]} color="whiteAlpha.900">{bio2}</Text>
+        <Button
+          as="a"
+          href="#contactme-section"
+          mt={2}
+          size="lg"
+          bg="white"
+          color="purple.700"
+          fontWeight="semibold"
+          rounded="lg"
+          boxShadow="md"
+          _hover={{ bg: "purple.50", transform: "translateY(-2px)", boxShadow: "lg" }}
+          _active={{ transform: "translateY(0)" }}
+          transition="all 0.15s ease"
+        >
+          Let's work together →
+        </Button>
       </VStack>
 
       {/* Right — Projects */}

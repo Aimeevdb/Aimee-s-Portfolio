@@ -25,7 +25,7 @@ const ContactMeSection = () => {
     initialValues: {
       firstName: "",
       email: "",
-      type: "hireMe",
+      type: "freelance",
       comment: "",
     },
     validationSchema: Yup.object({
@@ -111,8 +111,8 @@ const ContactMeSection = () => {
                   borderColor="whiteAlpha.300"
                   {...formik.getFieldProps("type")}
                 >
-                  <option value="hireMe" style={{ color: "black" }}>Freelance project proposal</option>
-                  <option value="openSource" style={{ color: "black" }}>Open source consultancy session</option>
+                  <option value="freelance" style={{ color: "black" }}>Freelance project</option>
+                  <option value="fullTime" style={{ color: "black" }}>Full-time role</option>
                   <option value="other" style={{ color: "black" }}>Other</option>
                 </Select>
               </FormControl>
