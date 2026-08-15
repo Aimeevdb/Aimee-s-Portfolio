@@ -409,6 +409,40 @@ export default function BrownieQuest() {
         </div>
       </section>
 
+      <hr className="aq-hr" />
+
+      {/* THE NAME */}
+      <section className="aq-section">
+        <div className="aq-section-label">The Name</div>
+        <h2 className="aq-h2">Why Brownie Quest?</h2>
+        <p className="aq-p">
+          The name does two jobs at once — and the second one turned out to describe the entire app.
+        </p>
+        <div className="aq-two-col">
+          <div className="aq-card">
+            <h3 className="aq-card-h3">🏅 Brownie points</h3>
+            <p className="aq-p">
+              The everyday sense: small, earned recognition for getting something done. No trophy, no
+              fanfare — just credit where it's due. That's the loop this app runs on.
+            </p>
+          </div>
+          <div className="aq-card">
+            <h3 className="aq-card-h3">🧙 The folklore</h3>
+            <p className="aq-p">
+              In British and Scottish folklore, a brownie is a household spirit who does the chores
+              overnight — in exchange for a small treat left out for them. A bowl of cream, a bit of
+              bread. Do the work, get the reward.
+            </p>
+          </div>
+        </div>
+        <p className="aq-p" style={{ marginTop: "2rem" }}>
+          That second meaning stopped feeling like a coincidence the moment we noticed it. The
+          brownie's bargain <em>is</em> the mechanic — break a chore into steps, finish it, and close
+          the loop with something real instead of a checked box. The name arrived after the design
+          was already built, and then explained it better than we had.
+        </p>
+      </section>
+
       <hr className="aq-gradient-hr" />
 
       {/* SCREENS */}
