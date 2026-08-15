@@ -1,1 +1,19 @@
+# ---------------------------------------------------------------------------
+# Netlify matches these rules TOP-DOWN and the FIRST match wins.
+# The SPA catch-all at the bottom must stay last, or it will swallow
+# everything above it.
+# ---------------------------------------------------------------------------
+
+# 1. Old Netlify subdomain -> custom domain.
+#    Netlify does NOT do this automatically, even with a primary domain set.
+#    The trailing "!" forces the redirect even though a file exists at the path.
+http://aimeevandenbroekeportfolio.netlify.app/*   https://aimeevdb.com/:splat   301!
+https://aimeevandenbroekeportfolio.netlify.app/*  https://aimeevdb.com/:splat   301!
+
+# 2. Old case study slug -> new one (project renamed ADHD Quest -> Brownie Quest).
+#    /adhd-quest was the only case study page Google had indexed, and it is
+#    linked from an unpublished LinkedIn draft, so this must not 404.
+/adhd-quest   /brownie-quest   301!
+
+# 3. SPA fallback — MUST BE LAST.
 /*    /index.html   200

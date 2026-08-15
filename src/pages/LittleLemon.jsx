@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import usePageMeta from "../hooks/usePageMeta";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600&family=Karla:wght@300;400;500;600;700&display=swap');
@@ -225,6 +226,10 @@ const learned = [
 ];
 
 export default function LittleLemon() {
+  usePageMeta(
+    "Little Lemon — React Booking App",
+    "A frontend case study: building the Little Lemon restaurant booking app in React, with accessible forms and validated state."
+  );
   useEffect(() => {
     const styleTag = document.createElement("style");
     styleTag.textContent = styles;
@@ -342,7 +347,7 @@ export default function LittleLemon() {
       </section>
 
       <footer className="ll-footer">
-        &copy; 2026 Aimee Van den Broeke &middot; Little Lemon Frontend Case Study
+        &copy; 2026 Aimee Van den broeke &middot; Little Lemon Frontend Case Study
       </footer>
     </div>
   );

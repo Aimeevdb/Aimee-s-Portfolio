@@ -6,7 +6,7 @@ import SpectrumCare from './pages/SpectrumCare';
 import Mentamorph from './pages/Mentamorph';
 import FamilyTime from './pages/FamilyTime';
 import LittleLemon from './pages/LittleLemon';
-import ADHDQuest from './pages/ADHDQuest';
+import BrownieQuest from './pages/BrownieQuest';
 
 export default function AppRouter() {
   return (
@@ -18,7 +18,7 @@ export default function AppRouter() {
           <Route path="/mentamorph" element={<Mentamorph />} />
           <Route path="/family-time" element={<FamilyTime />} />
           <Route path="/little-lemon" element={<LittleLemon />} />
-          <Route path="/adhd-quest" element={<ADHDQuest />} />
+          <Route path="/brownie-quest" element={<BrownieQuest />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import usePageMeta from "../hooks/usePageMeta";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fredoka+One&display=swap');
@@ -282,6 +283,10 @@ const contributions = [
 ];
 
 export default function FamilyTime() {
+  usePageMeta(
+    "Family Time App — UX Case Study",
+    "A UX case study on the Family Time app — research, wireframes, and high-fidelity design by Aimee Van den broeke."
+  );
   useEffect(() => {
     const styleTag = document.createElement("style");
     styleTag.textContent = styles;
@@ -464,7 +469,7 @@ export default function FamilyTime() {
       </section>
 
       <footer className="ft-footer">
-        &copy; 2026 Aimee Van den Broeke &middot; Family Time App UX Case Study
+        &copy; 2026 Aimee Van den broeke &middot; Family Time App UX Case Study
       </footer>
     </div>
   );

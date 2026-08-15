@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import usePageMeta from "../hooks/usePageMeta";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
@@ -308,6 +309,10 @@ const contributions = [
 ];
 
 export default function SpectrumCare() {
+  usePageMeta(
+    "Spectrum Care — Therapist Search UX",
+    "A UX/UI case study redesigning the therapist search experience for Spectrum Care, from research through high-fidelity prototype."
+  );
   useEffect(() => {
     const styleTag = document.createElement("style");
     styleTag.textContent = styles;
@@ -473,7 +478,7 @@ export default function SpectrumCare() {
       </section>
 
       <footer className="sc-footer">
-        &copy; 2026 Aimee Van den Broeke &middot; Spectrum Care UX/UI Case Study
+        &copy; 2026 Aimee Van den broeke &middot; Spectrum Care UX/UI Case Study
       </footer>
     </div>
   );

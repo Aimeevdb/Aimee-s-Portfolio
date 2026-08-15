@@ -63,13 +63,13 @@ export default function Footer() {
         <div>
           <p className="site-footer-byline">
             Designed, coded, and deployed by{" "}
-            <strong>Aimee Van den Broeke</strong>.
+            <strong>Aimee Van den broeke</strong>.
           </p>
           <p className="site-footer-meta">
             Every screen, component, and line of code on this site is my own
             work — React &amp; Chakra UI, designed in Figma, deployed on Netlify.
             <br />
-            &copy; {YEAR} Aimee Van den Broeke &middot; Gresham, Oregon
+            &copy; {YEAR} Aimee Van den broeke &middot; Gresham, Oregon
           </p>
         </div>
 

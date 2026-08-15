@@ -2,8 +2,10 @@ import LandingSection from "../components/LandingSection";
 import AboutSection from "../components/AboutSection";
 import ColophonSection from "../components/ColophonSection";
 import ContactMeSection from "../components/ContactMeSection";
+import usePageMeta from "../hooks/usePageMeta";
 
 export default function Home() {
+  usePageMeta();
   return (
     <>
       <LandingSection

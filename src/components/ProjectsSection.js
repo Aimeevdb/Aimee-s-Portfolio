@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import Card from "./Card";
 import mentamorphLogo from "../images/MentamorphLogo.png";
-import adhdQuestPreview from "../images/ADHDQuest.png";
+import brownieQuestPreview from "../images/BrownieQuest.png";
 
 const projects = [
   {
@@ -38,12 +38,12 @@ const projects = [
     icon: "calendar",
   },
   {
-    title: "ADHD Quest",
-    description: "A gamified mobile app that helps people with ADHD break tasks into manageable steps — and actually finish them. Complete quests, earn rewards, build momentum.",
-    link: "/adhd-quest",
+    title: "Brownie Quest",
+    description: "A gamified mobile app that helps people with ADHD break tasks into manageable steps — and actually finish them. Complete quests, earn rewards, build momentum with a brownie companion.",
+    link: "/brownie-quest",
     tags: ["UX/UI Design", "Figma", "Mobile App", "In Progress"],
     headerGradient: "linear-gradient(135deg, #4A6FA5 0%, #7442A0 100%)",
-    headerImage: adhdQuestPreview,
+    headerImage: brownieQuestPreview,
   },
 ];
 

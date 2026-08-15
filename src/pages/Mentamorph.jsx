@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import usePageMeta from "../hooks/usePageMeta";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap');
@@ -280,7 +281,7 @@ const team = [
   { role: "UX Design Lead", name: "Kenisha Griggs" },
   { role: "UX Design", name: "Kaira Mellix" },
   { role: "UI Design", name: "Terrence Green" },
-  { role: "UX Research Coordinator", name: "Aimee Van den Broeke" },
+  { role: "UX Research Coordinator", name: "Aimee Van den broeke" },
   { role: "Usability Testing", name: "Raymond Chelf" },
 ];
 
@@ -312,6 +313,10 @@ const contributions = [
 ];
 
 export default function Mentamorph() {
+  usePageMeta(
+    "MentaMorph — UX Research Case Study",
+    "UX research case study from my work as UX Research Coordinator at MentaMorph Inc — personas, competitive audits, and a Figma design system."
+  );
   useEffect(() => {
     const styleTag = document.createElement("style");
     styleTag.textContent = styles;
@@ -509,7 +514,7 @@ export default function Mentamorph() {
       </section>
 
       <footer className="mm-footer">
-        &copy; 2026 Aimee Van den Broeke &middot; MentaMorph UX Case Study
+        &copy; 2026 Aimee Van den broeke &middot; MentaMorph UX Case Study
       </footer>
     </div>
   );

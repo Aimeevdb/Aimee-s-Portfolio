@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import usePageMeta from "../hooks/usePageMeta";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
@@ -300,12 +301,12 @@ const matters = [
 ];
 
 const screens = [
-  { title: "Onboarding", desc: "Welcoming landing screen with the ADHD Quest brand identity, friendly tone, and a clear call to action." },
+  { title: "Onboarding", desc: "Welcoming landing screen with the Brownie Quest brand identity, friendly tone, and a clear call to action." },
   { title: "Add a Task", desc: "Users capture tasks quickly with minimal friction — a simple input with supportive, encouraging copy." },
-  { title: "Break It Down", desc: "Tasks are decomposed into step-by-step sub-tasks, with the wizard gnome companion encouraging progress at each step." },
-  { title: "Task Complete!", desc: "An animated celebration screen with the wizard mascot reacting to the achievement, reinforcing positive behavior." },
+  { title: "Break It Down", desc: "Tasks are decomposed into step-by-step sub-tasks, with the brownie companion encouraging progress at each step." },
+  { title: "Task Complete!", desc: "An animated celebration screen with the brownie mascot reacting to the achievement, reinforcing positive behavior." },
   { title: "Reward Time!", desc: "Users unlock a small reward — a treat suggestion or in-app collectible — closing the positive reinforcement loop." },
-  { title: "Customization", desc: "Users personalize their wizard gnome's clothing, accessories, and background scenes to build emotional attachment." },
+  { title: "Customization", desc: "Users personalize their brownie's clothing, accessories, and background scenes to build emotional attachment." },
 ];
 
 const roadmap = [
@@ -325,7 +326,11 @@ const contributions = [
   { icon: "🧙", label: "Mascot & Visual Concept Direction" },
 ];
 
-export default function ADHDQuest() {
+export default function BrownieQuest() {
+  usePageMeta(
+    "Brownie Quest — Gamified ADHD Task App",
+    "A UX/UI case study: designing Brownie Quest, a gamified task app that helps people with ADHD break tasks into steps, guided by a brownie companion. Figma prototype and user research in progress."
+  );
   useEffect(() => {
     const styleTag = document.createElement("style");
     styleTag.textContent = styles;
@@ -343,9 +348,9 @@ export default function ADHDQuest() {
         <div className="aq-hero-content">
           <div>
             <span className="aq-tag">UX/UI Case Study · In Progress</span>
-            <h1 className="aq-h1">ADHD <em>Quest</em></h1>
+            <h1 className="aq-h1">Brownie <em>Quest</em></h1>
             <p className="aq-hero-sub">
-              A gamified task management app that helps people with ADHD break tasks into manageable steps — guided by a wizard gnome companion who celebrates every win.
+              A gamified task management app that helps people with ADHD break tasks into manageable steps — guided by a brownie companion who celebrates every win.
             </p>
             <div className="aq-pills">
               <span className="aq-pill">UX/UI Design</span>
@@ -453,7 +458,7 @@ export default function ADHDQuest() {
       <section className="aq-section">
         <div className="aq-section-label">Project Roadmap</div>
         <h2 className="aq-h2">Where this stands</h2>
-        <p className="aq-p">ADHD Quest is a 3–6 month project (June–November 2026). Here's the current state of each phase.</p>
+        <p className="aq-p">Brownie Quest is a 3–6 month project (June–November 2026). Here's the current state of each phase.</p>
         <div className="aq-roadmap">
           {roadmap.map((r, i) => (
             <div key={i} className={`aq-roadmap-item aq-roadmap-${r.status}`}>
@@ -537,7 +542,7 @@ export default function ADHDQuest() {
       </section>
 
       <footer className="aq-footer">
-        &copy; 2026 Aimee Van den Broeke · ADHD Quest UX/UI Case Study (In Progress)
+        &copy; 2026 Aimee Van den broeke · Brownie Quest UX/UI Case Study (In Progress)
       </footer>
     </div>
   );
