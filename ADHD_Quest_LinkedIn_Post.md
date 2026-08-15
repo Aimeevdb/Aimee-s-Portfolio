@@ -8,7 +8,7 @@ Two ways to help:
 🧙 Try the prototype (5 screens, 2 minutes)
 📋 Take the survey (5 minutes, brutally honest feedback welcome)
 
-Both are linked from the case study page here: https://aimeevandenbroekeportfolio.netlify.app/adhd-quest
+Both are linked from the case study page here: https://aimeevdb.com/adhd-quest
 
 Also still looking for 2-3 collaborators who want to dig into the research side of this with me — comment or DM if that's you.
 

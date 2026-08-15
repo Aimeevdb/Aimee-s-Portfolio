@@ -8,15 +8,17 @@
 
     <!-- Primary Meta -->
     <title>Aimee Van den Broeke | UX Designer &amp; Frontend Developer</title>
-    <meta name="description" content="Portfolio of Aimee Van den Broeke — UX Designer and Frontend Developer specializing in React, Figma, and user-centered design." />
+    <meta name="description" content="Portfolio of Aimee Van den Broeke — UX Designer and Frontend Developer in Gresham, Oregon. Every case study, screen, and line of code on this site is my own work. React, Figma, and user-centered design." />
     <meta name="author" content="Aimee Van den Broeke" />
+    <meta name="creator" content="Aimee Van den Broeke" />
+    <link rel="canonical" href="https://aimeevdb.com/" />
 
     <!-- Open Graph (LinkedIn, Facebook, Slack) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://aimeevandenbroekeportfolio.netlify.app/" />
+    <meta property="og:url" content="https://aimeevdb.com/" />
     <meta property="og:title" content="Aimee Van den Broeke | UX Designer &amp; Frontend Developer" />
-    <meta property="og:description" content="Portfolio of Aimee Van den Broeke — UX Designer and Frontend Developer specializing in React, Figma, and user-centered design." />
-    <meta property="og:image" content="https://aimeevandenbroekeportfolio.netlify.app/og-image.png" />
+    <meta property="og:description" content="Portfolio of Aimee Van den Broeke — UX Designer and Frontend Developer. Designed in Figma, coded in React, built and deployed entirely by me." />
+    <meta property="og:image" content="https://aimeevdb.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Aimee Van den Broeke Portfolio" />
@@ -26,12 +28,70 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Aimee Van den Broeke | UX Designer &amp; Frontend Developer" />
-    <meta name="twitter:description" content="Portfolio of Aimee Van den Broeke — UX Designer and Frontend Developer specializing in React, Figma, and user-centered design." />
-    <meta name="twitter:image" content="https://aimeevandenbroekeportfolio.netlify.app/og-image.png" />
+    <meta name="twitter:description" content="Portfolio of Aimee Van den Broeke — UX Designer and Frontend Developer. Designed in Figma, coded in React, built and deployed entirely by me." />
+    <meta name="twitter:image" content="https://aimeevdb.com/og-image.png" />
     <meta name="google-site-verification" content="JuOuvgtbtoaaojn4NDweFrWWsibVcaJxoizm0ZjFOeE" />
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Structured data: establishes Aimee as the author/creator of this site -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://aimeevdb.com/#aimee",
+          "name": "Aimee Van den Broeke",
+          "url": "https://aimeevdb.com/",
+          "email": "aimeevdb@gmail.com",
+          "jobTitle": "UX Designer & Frontend Developer",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gresham",
+            "addressRegion": "OR",
+            "addressCountry": "US"
+          },
+          "knowsAbout": [
+            "UX Design",
+            "User Research",
+            "Frontend Development",
+            "React",
+            "Figma",
+            "Prototyping",
+            "Design Systems",
+            "Accessibility"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/aimee-van-den-broeke/",
+            "https://github.com/Aimeevdb"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://aimeevdb.com/#website",
+          "url": "https://aimeevdb.com/",
+          "name": "Aimee Van den Broeke Portfolio",
+          "description": "Portfolio of Aimee Van den Broeke, UX Designer and Frontend Developer.",
+          "inLanguage": "en-US",
+          "author": { "@id": "https://aimeevdb.com/#aimee" },
+          "creator": { "@id": "https://aimeevdb.com/#aimee" },
+          "copyrightHolder": { "@id": "https://aimeevdb.com/#aimee" },
+          "publisher": { "@id": "https://aimeevdb.com/#aimee" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://aimeevdb.com/#webpage",
+          "url": "https://aimeevdb.com/",
+          "name": "Aimee Van den Broeke | UX Designer & Frontend Developer",
+          "isPartOf": { "@id": "https://aimeevdb.com/#website" },
+          "about": { "@id": "https://aimeevdb.com/#aimee" },
+          "author": { "@id": "https://aimeevdb.com/#aimee" }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
