@@ -14,6 +14,14 @@ const projects = [
     icon: "🍋",
   },
   {
+    title: "Brownie Quest",
+    description: "A gamified mobile app that helps people with ADHD break tasks into manageable steps — and actually finish them. Complete quests, earn rewards, build momentum with a brownie companion.",
+    link: "/brownie-quest",
+    tags: ["UX/UI Design", "Figma", "Mobile App", "In Progress"],
+    headerGradient: "linear-gradient(135deg, #4A6FA5 0%, #7442A0 100%)",
+    headerImage: brownieQuestPreview,
+  },
+  {
     title: "Mentamorph",
     description: "A UX case study focused teaching youth and their families about financial resiliency in a gamified environment.",
     link: "/mentamorph",
@@ -37,15 +45,8 @@ const projects = [
     headerGradient: "linear-gradient(135deg, #fef08a 0%, #bbf7d0 33%, #bfdbfe 66%, #e9d5ff 100%)",
     icon: "calendar",
   },
-  {
-    title: "Brownie Quest",
-    description: "A gamified mobile app that helps people with ADHD break tasks into manageable steps — and actually finish them. Complete quests, earn rewards, build momentum with a brownie companion.",
-    link: "/brownie-quest",
-    tags: ["UX/UI Design", "Figma", "Mobile App", "In Progress"],
-    headerGradient: "linear-gradient(135deg, #4A6FA5 0%, #7442A0 100%)",
-    headerImage: brownieQuestPreview,
-  },
 ];
+
 
 const ProjectsSection = ({ embedded = false }) => {
   return (
