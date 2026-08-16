@@ -441,6 +441,9 @@ export default function BrownieQuest() {
           the loop with something real instead of a checked box. The name arrived after the design
           was already built, and then explained it better than we had.
         </p>
+        <p className="aq-p" style={{ marginTop: "1.25rem", fontStyle: "italic" }}>
+          Brownie Quest was Marina's idea — both meanings.
+        </p>
       </section>
 
       <hr className="aq-gradient-hr" />
@@ -478,9 +481,9 @@ export default function BrownieQuest() {
           <div className="aq-team-card">
             <div className="aq-team-avatar aq-team-avatar-2">M</div>
             <div>
-              <div className="aq-team-name">Marina — Co-Author</div>
+              <div className="aq-team-name">Marina Henderson — Co-Author</div>
               <div className="aq-team-role">Concept &amp; Creative Direction</div>
-              <div className="aq-team-desc">Originated the quest concept and collaborates on creative direction and review.</div>
+              <div className="aq-team-desc">Originated the quest concept, named the project, and collaborates on creative direction and review.</div>
             </div>
           </div>
         </div>
