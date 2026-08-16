@@ -364,6 +364,8 @@ export default function BrownieQuest() {
               <span className="aq-status-dot" />
               Active — Phase 1 &amp; 2
             </div>
+            <div className="aq-aside-label">Concept</div>
+            <div className="aq-aside-value">Marina Van den broeke</div>
             <div className="aq-aside-label">My Role</div>
             <div className="aq-aside-value">UX/UI Design &amp; Project Management</div>
             <div className="aq-aside-label">Timeline</div>
@@ -473,7 +475,7 @@ export default function BrownieQuest() {
           <div className="aq-team-card">
             <div className="aq-team-avatar aq-team-avatar-1">A</div>
             <div>
-              <div className="aq-team-name">Aimee — Project Lead</div>
+              <div className="aq-team-name">Aimee Van den broeke — Project Lead</div>
               <div className="aq-team-role">UX/UI Design &amp; Project Management</div>
               <div className="aq-team-desc">Owns end-to-end design: research, wireframes, prototyping, usability testing, and documentation.</div>
             </div>
@@ -481,7 +483,7 @@ export default function BrownieQuest() {
           <div className="aq-team-card">
             <div className="aq-team-avatar aq-team-avatar-2">M</div>
             <div>
-              <div className="aq-team-name">Marina Henderson — Co-Author</div>
+              <div className="aq-team-name">Marina Van den broeke — Concept Creator</div>
               <div className="aq-team-role">Concept &amp; Creative Direction</div>
               <div className="aq-team-desc">Originated the quest concept, named the project, and collaborates on creative direction and review.</div>
             </div>
