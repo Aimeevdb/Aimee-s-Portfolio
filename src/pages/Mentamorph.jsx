@@ -303,15 +303,6 @@ const afterFindings = [
   "Adding feedback to player choices created higher overall satisfaction ratings.",
 ];
 
-const contributions = [
-  { icon: "🔬", label: "UX Research Coordination" },
-  { icon: "🧪", label: "Usability Study Design" },
-  { icon: "📋", label: "Survey Construction" },
-  { icon: "🗺️", label: "User Journey Mapping" },
-  { icon: "👤", label: "Persona Development" },
-  { icon: "📎", label: null, isLink: true },
-];
-
 export default function Mentamorph() {
   usePageMeta(
     "MentaMorph — UX Research Case Study",
@@ -333,7 +324,7 @@ export default function Mentamorph() {
         <div className="mm-hero-orb2" aria-hidden="true" />
         <div className="mm-hero-content">
           <div>
-            <span className="mm-tag">UX Research &amp; Case Study</span>
+            <span className="mm-tag">Client Project &middot; MentaMorph Inc &middot; 2025</span>
             <h1 className="mm-h1">Menta<em>Morph</em></h1>
             <p className="mm-hero-sub">
               A financial literacy game that builds money management skills through resilience-enhancing, play-based learning for teens.
@@ -346,6 +337,8 @@ export default function Mentamorph() {
             </div>
           </div>
           <div className="mm-hero-aside">
+            <div className="mm-aside-label">My Role</div>
+            <div className="mm-aside-duration">UX Researcher &rarr; Research Coordinator</div>
             <div className="mm-aside-label">Project Duration</div>
             <div className="mm-aside-duration">May 2025 &ndash; July 2025</div>
             <div className="mm-aside-label">Riipen Team</div>
@@ -385,6 +378,10 @@ export default function Mentamorph() {
             <h3 className="mm-card-h3">&#11088; The Goal</h3>
             <p className="mm-p">Enhance educational clarity and gameplay flow by incorporating accessible definitions for key financial literacy terms and streamlining screen transitions — fostering an engaging experience that supports long-term financial learning and resilience among teens.</p>
           </div>
+        </div>
+        <div className="mm-card" style={{ marginTop: "2rem" }}>
+          <h3 className="mm-card-h3">&#9202; The Constraint</h3>
+          <p className="mm-p">Thirty hours, three months, five people, and a live client. I worked alongside a design lead, two designers, and a usability tester, with weekly client check-ins keeping scope honest. The audience raised the bar further: our primary user is twelve years old, so every term and every screen had to survive a seventh-grade reading level.</p>
         </div>
       </section>
 
@@ -470,26 +467,47 @@ export default function Mentamorph() {
       {/* CONTRIBUTIONS */}
       <section className="mm-section">
         <div className="mm-section-label">My Contribution</div>
-        <h2 className="mm-h2">What I brought to the team</h2>
-        <div className="mm-contrib-grid">
-          {contributions.map((item, i) =>
-            item.isLink ? (
-              <div key={i} className="mm-contrib-item">
-                <div className="mm-contrib-icon">{item.icon}</div>
-                <h4 className="mm-contrib-h4">
-                  <a href={SLIDE_DECK_URL} target="_blank" rel="noreferrer" style={{ color: "#34d399", textDecoration: "none" }}>
-                    View Full Case Study &#8594;
-                  </a>
-                </h4>
-              </div>
-            ) : (
-              <div key={i} className="mm-contrib-item">
-                <div className="mm-contrib-icon">{item.icon}</div>
-                <h4 className="mm-contrib-h4">{item.label}</h4>
-              </div>
-            )
-          )}
-        </div>
+        <h2 className="mm-h2">What I actually did</h2>
+        <p className="mm-p">
+          I was brought on as the UX Researcher. I built the competitive audit from scratch and
+          developed the personas the team designed against — Mateo and his mother, Jennifer. I recruited our
+          usability study participants and ran the sessions, editing the study protocols Raymond
+          drafted before they went in front of real users.
+        </p>
+        <p className="mm-p" style={{ marginTop: "1.25rem" }}>
+          I was second chair in the weekly client meetings and led them whenever our design lead
+          couldn't attend. Partway through the project the team moved me from Researcher to
+          <strong> Research Coordinator</strong> — the work I had drifted into was keeping five
+          people pointed in the same direction, and the title caught up with it.
+        </p>
+        <a
+          className="mm-slide-link"
+          href={SLIDE_DECK_URL}
+          target="_blank"
+          rel="noreferrer"
+          style={{ marginTop: "2rem", display: "inline-flex" }}
+        >
+          View Full Case Study &#8594;
+        </a>
+      </section>
+
+      <hr className="mm-hr" />
+
+      {/* RESULT */}
+      <section className="mm-section">
+        <div className="mm-section-label">The Result</div>
+        <h2 className="mm-h2">What changed</h2>
+        <p className="mm-p">
+          The research drove the redesign. Pop-up definitions and in-game tutorials replaced the
+          undefined jargon, round endings got clear signals, and comprehension of the gameplay
+          mechanics improved in follow-up testing.
+        </p>
+        <p className="mm-p" style={{ marginTop: "1.25rem" }}>
+          Near the end I realized the team hadn't worked with a design system before — components
+          and sticker sheets were unfamiliar territory. Rather than route around it, I put together
+          a short training and walked everyone through it. They kept building that way after the
+          project wrapped, which is the change I'm proudest of: it outlasted me.
+        </p>
       </section>
 
       <hr className="mm-hr" />

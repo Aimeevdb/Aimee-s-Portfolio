@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "Mentamorph",
-    description: "A UX case study focused teaching youth and their families about financial resiliency in a gamified environment.",
+    description: "Client project for a financial literacy game for teens. Brought on as UX Researcher, promoted to Research Coordinator mid-project.",
     link: "/mentamorph",
     tags: ["UX Case Study", "Figma", "User Research"],
     headerGradient: "linear-gradient(135deg, #3b0764 0%, #1e3a5f 50%, #134e2a 100%)",
