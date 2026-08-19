@@ -381,7 +381,7 @@ export default function Mentamorph() {
         </div>
         <div className="mm-card" style={{ marginTop: "2rem" }}>
           <h3 className="mm-card-h3">&#9202; The Constraint</h3>
-          <p className="mm-p">Thirty hours, three months, five people, and a live client. I worked alongside a design lead, two designers, and a usability tester, with weekly client check-ins keeping scope honest. The audience raised the bar further: our primary user is twelve years old, so every term and every screen had to survive a seventh-grade reading level.</p>
+          <p className="mm-p">Thirty hours, three months, five people, and a live client. I worked alongside a design lead, two designers, and a usability tester, with weekly client check-ins keeping scope honest. We were the UX/UI design team; the build was never in our scope. The audience raised the bar further: our primary user is twelve years old, so every term and every screen had to survive a seventh-grade reading level.</p>
         </div>
       </section>
 
@@ -475,6 +475,10 @@ export default function Mentamorph() {
           drafted before they went in front of real users.
         </p>
         <p className="mm-p" style={{ marginTop: "1.25rem" }}>
+          Research wasn't the only thing I touched. We all designed in the shared Figma file, and I
+          contributed screens alongside the rest of the team.
+        </p>
+        <p className="mm-p" style={{ marginTop: "1.25rem" }}>
           I was second chair in the weekly client meetings and led them whenever our design lead
           couldn't attend. Partway through the project the team moved me from Researcher to
           <strong> Research Coordinator</strong> — the work I had drifted into was keeping five
@@ -498,15 +502,16 @@ export default function Mentamorph() {
         <div className="mm-section-label">The Result</div>
         <h2 className="mm-h2">What changed</h2>
         <p className="mm-p">
-          The research drove the redesign. Pop-up definitions and in-game tutorials replaced the
-          undefined jargon, round endings got clear signals, and comprehension of the gameplay
-          mechanics improved in follow-up testing.
+          We delivered two things to the client: a redesign and the research findings behind it.
+          The redesign added pop-up definitions for the financial terms, in-game tutorials, and a
+          clear signal for the end of a round. When we tested those revised designs, comprehension
+          of the gameplay mechanics improved and satisfaction ratings went up.
         </p>
         <p className="mm-p" style={{ marginTop: "1.25rem" }}>
           Near the end I realized the team hadn't worked with a design system before — components
-          and sticker sheets were unfamiliar territory. Rather than route around it, I put together
-          a short training and walked everyone through it. They kept building that way after the
-          project wrapped, which is the change I'm proudest of: it outlasted me.
+          and sticker sheets were unfamiliar territory. So I built ours out and ran a short
+          training to get everyone using it. They kept working that way after the project wrapped,
+          which is the change I'm proudest of: it outlasted me.
         </p>
       </section>
 
