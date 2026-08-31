@@ -255,10 +255,10 @@ export default function AboutSection() {
               At <strong>MentaMorph Inc</strong>, I worked as a UX Research Coordinator — creating user personas, running competitive audits, and introducing the team to Figma components and design systems. I helped shift the workflow from loose ideation toward scalable, reusable UI patterns. It reminded me why I made the switch: there's nothing better than watching your design decisions actually help someone.
             </p>
             <p>
-              Right now I'm putting the finishing touches on my portfolio and actively looking for <strong>frontend developer roles</strong> where I can bring both my technical skills and my instinct for user experience to the table. I'm not just someone who can build it — I'm someone who cares deeply about how it feels to use it.
+              Right now I'm available for <strong>subcontract and freelance work</strong> — design and UX overflow for studios, and full design-and-build projects for teams without a frontend developer in-house. Weekday availability, and I can usually turn a page or component around in a few days. I'm open to contract and full-time roles as well. I'm not just someone who can build it — I'm someone who cares deeply about how it feels to use it.
             </p>
             <p>
-              If that sounds like someone you want on your team, let's talk.
+              If that sounds like someone you want on a project, let's talk.
             </p>
             <a
               className="about-cta"

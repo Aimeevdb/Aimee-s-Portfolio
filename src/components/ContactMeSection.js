@@ -112,7 +112,8 @@ const ContactMeSection = () => {
                   {...formik.getFieldProps("type")}
                 >
                   <option value="freelance" style={{ color: "black" }}>Freelance project</option>
-                  <option value="fullTime" style={{ color: "black" }}>Full-time role</option>
+                  <option value="subcontract" style={{ color: "black" }}>Subcontract / design overflow</option>
+                  <option value="fullTime" style={{ color: "black" }}>Contract or full-time role</option>
                   <option value="other" style={{ color: "black" }}>Other</option>
                 </Select>
               </FormControl>

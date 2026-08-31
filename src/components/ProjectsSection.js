@@ -6,22 +6,6 @@ import brownieQuestPreview from "../images/BrownieQuest.png";
 
 const projects = [
   {
-    title: "Little Lemon Booking Site",
-    description: "Designing a seamless restaurant booking experience for Little Lemon.",
-    link: "/little-lemon",
-    tags: ["Frontend", "React", "UX Design"],
-    headerGradient: "linear-gradient(135deg, #F4CE14 0%, #6b8f71 60%, #495E57 100%)",
-    icon: "🍋",
-  },
-  {
-    title: "Brownie Quest",
-    description: "A gamified mobile app that helps people with ADHD break tasks into manageable steps — and actually finish them. Complete quests, earn rewards, build momentum with a brownie companion.",
-    link: "/brownie-quest",
-    tags: ["UX/UI Design", "Figma", "Mobile App", "In Progress"],
-    headerGradient: "linear-gradient(135deg, #4A6FA5 0%, #7442A0 100%)",
-    headerImage: brownieQuestPreview,
-  },
-  {
     title: "Mentamorph",
     description: "Client project for a financial literacy game for teens. Brought on as UX Researcher, promoted to Research Coordinator mid-project.",
     link: "/mentamorph",
@@ -36,6 +20,22 @@ const projects = [
     tags: ["UX Case Study", "Figma", "Wireframing", "Prototyping"],
     headerGradient: "linear-gradient(180deg, #dce8f5 0%, #e8f0f8 50%, #f5f0e8 100%)",
     icon: "rainbow-arc",
+  },
+  {
+    title: "Brownie Quest",
+    description: "A gamified mobile app that helps people with ADHD break tasks into manageable steps — and actually finish them. Complete quests, earn rewards, build momentum with a brownie companion.",
+    link: "/brownie-quest",
+    tags: ["UX/UI Design", "Figma", "Mobile App", "In Progress"],
+    headerGradient: "linear-gradient(135deg, #4A6FA5 0%, #7442A0 100%)",
+    headerImage: brownieQuestPreview,
+  },
+  {
+    title: "Little Lemon Booking Site",
+    description: "Designing a seamless restaurant booking experience for Little Lemon.",
+    link: "/little-lemon",
+    tags: ["Frontend", "React", "UX Design"],
+    headerGradient: "linear-gradient(135deg, #F4CE14 0%, #6b8f71 60%, #495E57 100%)",
+    icon: "🍋",
   },
   {
     title: "Family Time",

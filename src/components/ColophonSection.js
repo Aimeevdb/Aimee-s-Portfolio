@@ -13,7 +13,7 @@ const process = [
   {
     step: "01",
     title: "Researched and wireframed it",
-    desc: "Audited portfolios that actually got their owners hired, mapped the content hierarchy a hiring manager scans in 30 seconds, then wireframed in Figma.",
+    desc: "Studied portfolios that won their owners real work, worked out what a visitor decides in the first thirty seconds, then wireframed around that in Figma.",
   },
   {
     step: "02",
